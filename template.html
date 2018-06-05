@@ -9,6 +9,13 @@
 
     <script>
 
+    	const accelerometer = new Accelerometer();
+
+    	accelerometer.start();
+    	accelerometer.onreading = () =>{
+    		console.log(sensor.x);
+    	}
+
     </script>
   </body>
 </html>
