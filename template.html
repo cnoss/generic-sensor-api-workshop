@@ -6,15 +6,15 @@
     <title>Generic Sensor API Template</title>
   </head>
   <body>
-	Version 4.0
+	Version 5.0
 
 	<div id="output">
 	</div>
     <script>
 
 		
+		const gy = new Gyroscope();
     	const ac = new Accelerometer();
-    	const gy = new Gyroscope();
     	const output = document.getElementById("output");
 
     	ac.start();
