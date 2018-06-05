@@ -12,9 +12,9 @@
 	</div>
     <script>
 
-		const gy = new Gyroscope();
+		
     	const ac = new Accelerometer();
-    	
+    	const gy = new Gyroscope();
     	const output = document.getElementById("output");
 
     	ac.start();
@@ -26,7 +26,7 @@
     	gy.start();
     	gy.onreading = () =>{
     		console.log("Gyroscope " + gy.x);
-    		output.innerHTML = "Gyroscope x:" + gy.x + " y:" + gy.y + "z:" + gy.z + "<hr>";
+    		output.innerHTML += "Gyroscope x:" + gy.x + " y:" + gy.y + "z:" + gy.z + "<hr>";
     	}
 
     </script>
