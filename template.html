@@ -6,26 +6,27 @@
     <title>Generic Sensor API Template</title>
   </head>
   <body>
-	Version 2.0
+	Version 3.0
 
 	<div id="output">
 	</div>
     <script>
 
+		const gy = new Gyroscope();
     	const ac = new Accelerometer();
-    	const gy = new Gyroscope();
+    	
     	const output = document.getElementById("output");
 
     	ac.start();
     	ac.onreading = () =>{
-    		console.log(ac.x);
-    		output.innerHTML += "Accelerometer x:" + ac.x + " y:" + ac.y + "z:" + ac.z + "<br>";
+    		console.log("Accelerometer " + ac.x);
+    		output.innerHTML += "Accelerometer x:" + ac.x + " y:" + ac.y + "z:" + ac.z + "<hr>";
     	}
 
     	gy.start();
     	gy.onreading = () =>{
-    		console.log(gy.x);
-    		output.innerHTML = "Gyroscope x:" + gy.x + " y:" + gy.y + "z:" + gy.z + "<br>";
+    		console.log("Gyroscope " + gy.x);
+    		output.innerHTML = "Gyroscope x:" + gy.x + " y:" + gy.y + "z:" + gy.z + "<hr>";
     	}
 
     </script>
